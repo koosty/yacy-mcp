@@ -61,3 +61,4 @@ Thumbs.db
 .DS_Store
 *.pyc
 *.db
+gha-creds-*.json
