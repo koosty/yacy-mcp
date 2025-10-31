@@ -27,7 +27,7 @@ jobs:
       run: |
         uv sync --all-extras --dev
 
-    - name: Run tests
+    - name: Run tests with uv
       run: |
         uv run pytest tests/ -v
 
