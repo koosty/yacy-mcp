@@ -1,0 +1,40 @@
+[project]
+name = "yacy-mcp"
+version = "0.1.0"
+description = "MCP (Model Context Protocol) Server implementation that provides AI tools to search using YaCy web search API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Koosty", email = "ken.kustian@gmail.com"},
+]
+keywords = ["mcp", "yacy", "search", "ai", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/koosty/yacy-mcp"
+Repository = "https://github.com/koosty/yacy-mcp"
+"Bug Reports" = "https://github.com/koosty/yacy-mcp/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+yacy-mcp = "yacy_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yacy_mcp"]
